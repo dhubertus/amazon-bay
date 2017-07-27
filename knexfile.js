@@ -2,7 +2,7 @@ module.exports = {
 
   development: {
     client: 'pg',
-    connection: 'postgres://localhost/DATABASE_NAME',
+    connection: 'postgres://localhost/final_inventory',
     migrations: {
       directory: 'db/migrations'
     },
@@ -13,7 +13,7 @@ module.exports = {
   },
   test: {
     client: 'pg',
-    connection: process.env.DATABASE_URL || 'postgres://localhost/DATABASE_NAME',
+    connection: process.env.DATABASE_URL || 'postgres://localhost/final_inventory_test',
     migrations: {
       directory: 'db/migrations'
     },
