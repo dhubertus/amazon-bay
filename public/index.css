@@ -1,4 +1,12 @@
+@import './styles/header.css';
+@import './styles/card-holder.css';
+@import './styles/card.css';
+@import './styles/history.css';
+@import './styles/cart.css';
+
 html,
 body {
   background: #90b2d2;
+  height: auto;
+  width: 100%;
 }

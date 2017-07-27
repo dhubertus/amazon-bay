@@ -1,0 +1,9 @@
+#card-holder {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background: #c589c5;
+  height: 1000px;
+  width: 80%;
+  margin: auto;
+}

@@ -47,7 +47,6 @@ app.post('/api/v1/history', (req, res) => {
       total: req.body.total
     })
     .then((result) => {
-      console.log(res, 'response');
       if (result.command === 'INSERT') {
         res.status(200).json(result);
       } else {

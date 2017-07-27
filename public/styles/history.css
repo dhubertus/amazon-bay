@@ -1,0 +1,10 @@
+.history {
+  display: flex;
+  position: absolute;
+  float: left;
+  height: 500px;
+  width: 50px;
+  background: green;
+  margin: 0;
+  z-index: 1;
+}
