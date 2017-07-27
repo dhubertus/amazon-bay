@@ -32,6 +32,11 @@ describe('API Routes', () => {
     chai.request(server)
       .get("/api/v1/inventory")
       .end((err, res) => {
+        res.body[0].should.have.property('id');
+        res.body[0].should.have.property('title');
+        res.body[0].should.have.property('description');
+        res.body[0].should.have.property('link');
+        res.body[0].should.have.property('price');
         res.should.have.status(200);
         res.should.be.json;
         done();
@@ -42,6 +47,10 @@ describe('API Routes', () => {
     chai.request(server)
       .get("/api/v1/history")
       .end((err, res) => {
+        res.body.length.should.equal(3);
+        res.body[0].should.have.property('id');
+        res.body[0].should.have.property('total');
+        res.body[0].should.have.property('created_at');
         res.should.have.status(200);
         res.should.be.json;
         done();
@@ -55,6 +64,7 @@ describe('API Routes', () => {
         total: 3000
       })
       .end((err, res) => {
+        res.body.command.should.equal('INSERT');
         res.should.have.status(200);
         res.should.be.json;
         done();
@@ -68,6 +78,7 @@ describe('API Routes', () => {
         null: null
       })
       .end((err, res) => {
+        res.body.error.should.equal('There was an error inserting to history. Please check that you are including the proper body with the request!');
         res.should.have.status(422);
         res.should.be.json;
         done();
