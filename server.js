@@ -47,7 +47,7 @@ app.post('/api/v1/history', (req, res) => {
       total: req.body.total
     })
     .then((result) => {
-      if (result.command === 'INSERT') {
+      if (req.body.total) {
         res.status(200).json(result);
       } else {
         res.status(422).json({ error: 'There was an error inserting to history. Please check that you are including the proper body with the request!' });

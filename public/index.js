@@ -1,7 +1,7 @@
 $(document).ready(() => {
   receiveInventory();
   persistCart();
-
+  receiveAllOrders();
 });
 
 
@@ -44,6 +44,12 @@ const persistCart = () => {
 $('.cart-toggle').on('click', function() {
   $('.cart-full').toggleClass('toggle-cart-display');
 });
+
+$('.history-toggle').on('click', function() {
+  $('.history-full').toggleClass('toggle-history-display');
+});
+
+
 
 const prependCartItem = (obj) => {
   $('.item-list').prepend(
@@ -105,3 +111,43 @@ $('#card-holder').on('click', '.add-to-cart-btn', function () {
 
   addItemToCart(cartObj);
 });
+
+
+$('.purchase-btn').on('click', function() {
+  createOrder();
+  receiveAllOrders();
+});
+
+
+const createOrder = () => {
+  const orderTotal = dollarsToCents($('.total-value-price').text());
+
+  fetch('/api/v1/history', {
+    method: 'POST',
+    headers: { "Content-type": "application/json" },
+    body: JSON.stringify({ total: orderTotal })
+  });
+};
+
+const receiveAllOrders = () => {
+  fetch('/api/v1/history')
+    .then((res) => res.json())
+    .then((result) => {
+      prependAllOrders(result);
+    });
+};
+
+const prependAllOrders = (array) => {
+  $('.order-list').empty();
+  array.forEach((obj, i) => {
+    const orderTotal = centsToDollars(obj.total);
+
+    $('.order-list').prepend(
+      `<div class="single-order">
+        <p>Order#:<span>${i + 1}</span></p>
+        <p>${obj.created_at}</p>
+        <p>Total:<span>$${orderTotal}</span></p>
+      </div>`
+    );
+  });
+};

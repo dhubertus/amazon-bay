@@ -3,8 +3,42 @@
   position: absolute;
   float: left;
   height: 500px;
-  width: 50px;
+  width: auto;
   background: green;
   margin: 0;
   z-index: 1;
+  flex-direction: row-reverse;
+}
+
+.history-tab {
+  display: flex;
+  width: 50px;
+}
+
+.history-toggle {
+  width: 100%;
+  height: 50px;
+}
+
+.history-full {
+  display: none;
+  width: 300px;
+  background: maroon;
+  flex-direction: column;
+}
+
+.history-full h3 {
+  width: 100%;
+  height: 100px;
+  background: purple;
+}
+
+.single-order {
+  height:150px;
+  width: 100%;
+  background: orange;
+}
+
+.toggle-history-display {
+  display: flex;
 }
