@@ -33,6 +33,10 @@ const prependInventory = (array) => {
 
 const persistCart = () => {
 
+  if (!localStorage.getItem('cartArray')) {
+    return;
+  }
+
   const currentLS = JSON.parse(localStorage.getItem('cartArray'));
 
   currentLS.map((obj) => {
@@ -85,7 +89,7 @@ const dollarsToCents = (string) => {
 };
 
 const centsToDollars = (int) => {
-  return `${int / 100}.00`;
+  return `$${int / 100}.00`;
 };
 
 const setCartItemInLS = (obj) => {
@@ -115,7 +119,6 @@ $('#card-holder').on('click', '.add-to-cart-btn', function () {
 
 $('.purchase-btn').on('click', function() {
   createOrder();
-  receiveAllOrders();
 });
 
 
@@ -126,7 +129,13 @@ const createOrder = () => {
     method: 'POST',
     headers: { "Content-type": "application/json" },
     body: JSON.stringify({ total: orderTotal })
-  });
+  })
+    .then(() => {
+      receiveAllOrders();
+      localStorage.clear();
+      $('.total-value-price').text('$0.00');
+      $('.item-list').empty();
+    });
 };
 
 const receiveAllOrders = () => {
@@ -146,7 +155,7 @@ const prependAllOrders = (array) => {
       `<div class="single-order">
         <p>Order#:<span>${i + 1}</span></p>
         <p>${obj.created_at}</p>
-        <p>Total:<span>$${orderTotal}</span></p>
+        <p>Total:<span>${orderTotal}</span></p>
       </div>`
     );
   });
