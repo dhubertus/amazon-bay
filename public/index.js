@@ -147,6 +147,9 @@ const receiveAllOrders = () => {
 };
 
 const prependAllOrders = (array) => {
+  if (!array.length) {
+    return;
+  }
   $('.order-list').empty();
   array.forEach((obj, i) => {
     const orderTotal = centsToDollars(obj.total);
