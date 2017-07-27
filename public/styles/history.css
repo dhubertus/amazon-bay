@@ -2,7 +2,7 @@
   display: flex;
   position: absolute;
   float: left;
-  height: 500px;
+  height: 100vh;
   width: auto;
   background: rgba(255, 140, 12, 0.25);
   margin: 0;
@@ -24,23 +24,42 @@
   background: #f2f2f2;
 }
 
+.history-toggle:hover {
+  background: #fd9827;
+  color: #24303d;
+}
+
 .history-full {
   display: none;
   width: 300px;
-  background: maroon;
+  background: rgba(36, 48, 61, 0.85);
   flex-direction: column;
+  overflow: scroll;
 }
 
 .history-full h3 {
   width: 100%;
-  height: 100px;
-  background: purple;
+  height: 10%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .single-order {
-  height:150px;
-  width: 100%;
+  height:115px;
+  width: 90%;
   background: orange;
+  margin: 5px;
+  text-align: center; 
+}
+
+.order-list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 95%;
+  width: 100%;
 }
 
 .toggle-history-display {
