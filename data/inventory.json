@@ -1,31 +1,49 @@
 { "toothebrush":
-    { "title": "toothbrush",
+    { "title": "Toothbrush",
       "description": "Best toothbrush around!",
       "link": "http://www.zerowasteweek.co.uk/wp-content/uploads/2014/07/tooth.jpg",
       "price": 3000
     },
   "soap":
-    { "title": "soap",
+    { "title": "Soap",
       "description": "Best soap around!",
       "link": "http://img.thrfun.com/img/016/076/bar_of_soap_stuck_in_a_toilet_l.jpg",
       "price": 1000
     },
   "socks":
-    { "title": "socks",
+    { "title": "Socks",
       "description": "Best socks around!",
       "link": "http://running.competitor.com/files/2014/09/Socks-800x449.jpg",
       "price": 10000
     },
   "house":
-    { "title": "house",
+    { "title": "House",
       "description": "Best house around!",
       "link": "https://static.pexels.com/photos/106399/pexels-photo-106399.jpeg",
       "price": 20000
     },
   "cactus":
-    { "title": "cactus",
+    { "title": "Cactus",
       "description": "Best cactus around!",
       "link": "http://idolosol.com/images/cactus-2.jpg",
       "price": 5000
+    },
+  "lantern":
+    { "title": "Lantern",
+      "description": "Best lantern around!",
+      "link": "http://www.americabyrail.com/Portals/0/lantern.jpg",
+      "price": 10000
+    },
+  "national park":
+    { "title": "National Park",
+      "description": "Best national park around!",
+      "link": "http://www.bandhavgarh-national-park.com/gallery/bandhavgarh-national-park_25.jpg",
+      "price": 500000
+    },
+  "moon":
+    { "title": "Moon",
+      "description": "Best moon around!",
+      "link": "https://static.bhphotovideo.com/explora/sites/default/files/styles/top_shot/public/ts-photographing-the-moon.jpg?itok=Mq0-zKUQ",
+      "price": 44000
     }
 }

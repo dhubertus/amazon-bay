@@ -4,5 +4,15 @@ header {
   align-items: center;
   height: 125px;
   width: 100%;
-  background: #d8b464;
+  background: #24303d;
+  color: #FFF;
+}
+
+header h1 {
+  font-weight: 100;
+  font-size: 3em;
+}
+
+#logo-span {
+  color: #fd9827;
 }

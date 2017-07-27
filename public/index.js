@@ -17,7 +17,7 @@ const prependInventory = (array) => {
   $('#card-holder').empty();
 
   array.forEach((item) => {
-    const adjustedPrice = `${item.price / 1000}.00`;
+    const adjustedPrice = `$${item.price / 1000}.00`;
 
     $('#card-holder').prepend(
       `<article class="card">

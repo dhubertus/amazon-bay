@@ -4,7 +4,7 @@
   float: left;
   height: 500px;
   width: auto;
-  background: green;
+  background: rgba(255, 140, 12, 0.25);
   margin: 0;
   z-index: 1;
   flex-direction: row-reverse;
@@ -12,12 +12,16 @@
 
 .history-tab {
   display: flex;
-  width: 50px;
+  width: 80px;
+  font-size: 0.8em;
 }
 
 .history-toggle {
   width: 100%;
   height: 50px;
+  font-size: 0.7em;
+  border: none;
+  background: #f2f2f2;
 }
 
 .history-full {
