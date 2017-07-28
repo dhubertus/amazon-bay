@@ -1,27 +1,27 @@
 .history {
+  background: rgba(255, 140, 12, 0.25);
   display: flex;
-  position: absolute;
+  flex-direction: row-reverse;
   float: left;
   height: 100vh;
-  width: auto;
-  background: rgba(255, 140, 12, 0.25);
   margin: 0;
+  position: absolute;
+  width: auto;
   z-index: 1;
-  flex-direction: row-reverse;
 }
 
 .history-tab {
   display: flex;
-  width: 80px;
   font-size: 0.8em;
+  width: 80px;
 }
 
 .history-toggle {
-  width: 100%;
-  height: 50px;
-  font-size: 0.7em;
-  border: none;
   background: #f2f2f2;
+  border: none;
+  font-size: 0.7em;
+  height: 50px;
+  width: 100%;
 }
 
 .history-toggle:hover {
@@ -30,33 +30,33 @@
 }
 
 .history-full {
-  display: none;
-  width: 300px;
   background: rgba(36, 48, 61, 0.85);
+  display: none;
   flex-direction: column;
   overflow: scroll;
+  width: 300px;
 }
 
 .history-full h3 {
-  width: 100%;
-  height: 10%;
+  align-items: center;
   color: #fff;
   display: flex;
+  height: 10%;
   justify-content: center;
-  align-items: center;
+  width: 100%;
 }
 
 .single-order {
-  height:115px;
-  width: 90%;
   background: orange;
+  height:115px;
   margin: 5px;
-  text-align: center; 
+  text-align: center;
+  width: 90%;
 }
 
 .order-list {
-  display: flex;
   align-items: center;
+  display: flex;
   flex-direction: column;
   height: 95%;
   width: 100%;

@@ -1,8 +1,8 @@
 #card-holder {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   height: 1000px;
-  width: 90%;
+  justify-content: center;
   margin: auto;
+  width: 90%;
 }

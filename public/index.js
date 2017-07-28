@@ -13,6 +13,7 @@ const receiveInventory = () => {
     });
 };
 
+
 const prependInventory = (array) => {
   $('#card-holder').empty();
 
@@ -31,8 +32,8 @@ const prependInventory = (array) => {
   });
 };
 
-const persistCart = () => {
 
+const persistCart = () => {
   if (!localStorage.getItem('cartArray')) {
     return;
   }
@@ -45,14 +46,15 @@ const persistCart = () => {
   });
 };
 
+
 $('.cart-toggle').on('click', function() {
   $('.cart-full').toggleClass('toggle-cart-display');
 });
 
+
 $('.history-toggle').on('click', function() {
   $('.history-full').toggleClass('toggle-history-display');
 });
-
 
 
 const prependCartItem = (obj) => {
@@ -64,11 +66,13 @@ const prependCartItem = (obj) => {
   );
 };
 
+
 const addItemToCart = (obj) => {
   prependCartItem(obj);
   adjustTotal(obj.price);
   setCartItemInLS(obj);
 };
+
 
 const adjustTotal = (price) => {
   const priceInCents = dollarsToCents(price);
@@ -80,6 +84,7 @@ const adjustTotal = (price) => {
   $('.total-value-price').text(newTotalInDollars);
 };
 
+
 const dollarsToCents = (string) => {
   return parseInt(string.split('').filter((item) => {
     if (item !== '$' && item !== '.') {
@@ -88,12 +93,13 @@ const dollarsToCents = (string) => {
   }).join(''));
 };
 
+
 const centsToDollars = (int) => {
   return `$${int / 100}.00`;
 };
 
-const setCartItemInLS = (obj) => {
 
+const setCartItemInLS = (obj) => {
   if (!localStorage.getItem('cartArray')) {
     const stringArray = JSON.stringify([]);
 
@@ -102,6 +108,7 @@ const setCartItemInLS = (obj) => {
   const cartArray = JSON.parse(localStorage.getItem('cartArray'));
 
   cartArray.push(obj);
+
   const stringCartArray = JSON.stringify(cartArray);
 
   localStorage.setItem('cartArray', stringCartArray);
@@ -138,6 +145,7 @@ const createOrder = () => {
     });
 };
 
+
 const receiveAllOrders = () => {
   fetch('/api/v1/history')
     .then((res) => res.json())
@@ -146,6 +154,7 @@ const receiveAllOrders = () => {
     });
 };
 
+
 const prependAllOrders = (array) => {
   if (!array.length) {
     return;
@@ -153,11 +162,12 @@ const prependAllOrders = (array) => {
   $('.order-list').empty();
   array.forEach((obj, i) => {
     const orderTotal = centsToDollars(obj.total);
+    const date = obj.created_at.slice(0, 10);
 
     $('.order-list').prepend(
       `<div class="single-order">
         <p>Order#:<span>${i + 1}</span></p>
-        <p>${obj.created_at}</p>
+        <p>${date}</p>
         <p>Total:<span>${orderTotal}</span></p>
       </div>`
     );

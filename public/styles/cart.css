@@ -1,12 +1,12 @@
 .cart {
-  display: flex;
-  position: relative;
-  float: right;
-  height: 100vh;
-  width: auto;
   background: rgba(255, 140, 12, 0.25);
   bottom: 1000px;
+  display: flex;
+  float: right;
+  height: 100vh;
   margin: 0;
+  position: relative;
+  width: auto;
   z-index: 1;
 }
 
@@ -17,11 +17,11 @@
 }
 
 .cart-toggle {
-  width: 100%;
-  height: 50px;
-  font-size: 0.7em;
-  border: none;
   background: #f2f2f2;
+  border: none;
+  font-size: 0.7em;
+  height: 50px;
+  width: 100%;
 }
 
 .cart-toggle:hover {
@@ -30,69 +30,69 @@
 }
 
 .cart-full {
-  display: none;
-  width: 300px;
-  background: rgba(36, 48, 61, 0.85);
-  flex-direction: column;
   align-items: center;
+  background: rgba(36, 48, 61, 0.85);
+  display: none;
+  flex-direction: column;
   overflow: scroll;
+  width: 300px;
 }
 
 .cart-full h3 {
-  width: 100%;
-  height: 10%;
-  margin: 0;
+  align-items: center;
   color: #fff;
   display: flex;
+  height: 10%;
   justify-content: center;
-  align-items: center;
+  margin: 0;
+  width: 100%;
 }
 
 .cart-full h5 {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 10%;
-  margin: 0;
   color: #fff;
+  display: flex;
+  height: 10%;
+  justify-content: center;
+  margin: 0;
+  width: 100%;
 }
 
 .item-list {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: 60%;
+  justify-content: center;
   margin: 0;
-  width: 90%;
   overflow: scroll;
+  width: 90%;
 }
 
 .total-value {
-  height:10%;
-  width: 100%;
-  margin: 0;
+  align-items: center;
   color: #fff;
   display: flex;
+  height:10%;
   justify-content: center;
-  align-items: center;
+  margin: 0;
+  width: 100%;
 }
 
 .single-item {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 50px;
   background: orange;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  width: 100%;
 }
 
 
 .purchase-btn {
-  width: 80%;
   height: 10%;
   margin: 0 0 20px 0;
+  width: 80%;
 }
 
 .toggle-cart-display {

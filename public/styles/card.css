@@ -1,63 +1,62 @@
 .card {
+  align-items: center;
+  background: #f2f2f2;
+  border-radius: 2px;
+  box-shadow: 2px 2px 2px #c7c7c7;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   height: 450px;
-  width: 270px;
-  background: #f2f2f2;
+  justify-content: center;
   margin: 10px;
-  box-shadow: 2px 2px 2px #c7c7c7;
-  border-radius: 2px;
+  width: 270px;
 }
 
 .card-title {
-  display: flex;
-  justify-content: center;
   align-items: center;
+  background: #b9b9b9;
+  display: flex;
+  height:12.5%;
+  justify-content: center;
   margin: 0;
   width: 100%;
-  height:12.5%;
-  background: #b9b9b9;
 }
 
 .card-desc {
-  display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
+  height: 12.5%;
+  justify-content: center;
   margin: 0;
   width:100%;
-  height: 12.5%;
 }
 
 .card-img {
+  border-radius: 2px;
+  filter: grayscale(40%);
   height:50%;
   width: 90%;
-  filter: grayscale(40%);
-  border-radius: 2px;
 }
 
 .card-price {
-  display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
+  height: 12.5%;
+  justify-content: center;
   margin: 0;
   width: 100%;
-  height: 12.5%;
 }
 
 .add-to-cart-btn {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  margin: 0;
-  width: 60%;
-  height: 8%;
-  margin-bottom: 20px;
-  border: none;
-  border-radius: 2px;
   background: #24303d;
+  border-radius: 2px;
+  border: none;
   color: #fd9827;
+  display: flex;
+  height: 8%;
+  justify-content: center;
+  margin: 0 0 20px 0;
+  width: 60%;
 }
 
 .add-to-cart-btn:hover {
